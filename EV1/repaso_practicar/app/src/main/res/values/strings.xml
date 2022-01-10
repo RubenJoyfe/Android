@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">repaso_practicar</string>
+    <string-array name="spinerbgops">
+        <item>black</item>
+        <item>blue</item>
+        <item>green</item>
+        <item>wood</item>
+        <item>sanic</item>
+    </string-array>
+</resources>

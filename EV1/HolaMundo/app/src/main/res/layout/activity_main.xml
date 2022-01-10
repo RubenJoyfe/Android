@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/Et1"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:hint="Operador 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/Et2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:hint="Operador 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Et1" />
+
+    <TextView
+        android:id="@+id/Tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Et2">
+
+
+        <Button
+            android:id="@+id/operar"
+            android:layout_width="102dp"
+            android:layout_height="64dp"
+            android:onClick="calcular"
+            android:text="Operar"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="268dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/answer"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:textAlignment="center"
+            android:onClick="answ"
+            android:text="Ans"
+            android:textSize="12dp"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="268dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:onClick="borrar"
+            android:text="DEL"
+            android:textSize="12dp"
+            tools:layout_editor_absoluteX="266dp"
+            tools:layout_editor_absoluteY="268dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="RESULTADO"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/operaciones"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <RadioButton
+                android:id="@+id/rbSuma"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Sumar"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="400dp" />
+
+            <RadioButton
+                android:id="@+id/rbResta"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Restar"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="400dp" />
+
+            <RadioButton
+                android:id="@+id/rbMultiplicacion"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Multiplicar"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="400dp" />
+
+            <RadioButton
+                android:id="@+id/rbDivision"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Dividir"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="400dp" />
+
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
